@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220617 17:09:21.106" rpa="false" schemaversion="3">
-<suite id="s1" name="resourcesUsedTC" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\resourcesUsedTC.robot">
-<test id="s1-t1" name="User must sign in to check out" line="6">
-<kw name="Common.Begin webtest">
-<msg timestamp="20220617 17:09:21.166" level="FAIL">No keyword with name 'Common.Begin webtest' found.</msg>
-<status status="FAIL" starttime="20220617 17:09:21.166" endtime="20220617 17:09:21.166"/>
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220621 11:27:20.168" rpa="false" schemaversion="3">
+<suite id="s1" name="Scalar Variables" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Scalar_Variables.robot">
+<test id="s1-t1" name="Variable demonstration" line="7">
+<kw name="Log" library="BuiltIn">
+<arg>${MY_VARIABLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220621 11:27:20.188" level="INFO">HELLO</msg>
+<status status="PASS" starttime="20220621 11:27:20.188" endtime="20220621 11:27:20.188"/>
 </kw>
-<kw name="Amazon.Search for products">
-<status status="NOT RUN" starttime="20220617 17:09:21.166" endtime="20220617 17:09:21.166"/>
-</kw>
-<kw name="Amazon.Select product">
-<status status="NOT RUN" starttime="20220617 17:09:21.166" endtime="20220617 17:09:21.166"/>
-</kw>
-<kw name="Amazon.Add product to chart">
-<status status="NOT RUN" starttime="20220617 17:09:21.166" endtime="20220617 17:09:21.166"/>
-</kw>
-<kw name="Common.End webtest">
-<status status="NOT RUN" starttime="20220617 17:09:21.183" endtime="20220617 17:09:21.183"/>
-</kw>
-<status status="FAIL" starttime="20220617 17:09:21.151" endtime="20220617 17:09:21.183">No keyword with name 'Common.Begin webtest' found.</status>
+<status status="PASS" starttime="20220621 11:27:20.188" endtime="20220621 11:27:20.188"/>
 </test>
-<status status="FAIL" starttime="20220617 17:09:21.119" endtime="20220617 17:09:21.183"/>
+<status status="PASS" starttime="20220621 11:27:20.183" endtime="20220621 11:27:20.188"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="resourcesUsedTC">resourcesUsedTC</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scalar Variables">Scalar Variables</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220617 17:09:21.151" level="ERROR">Error in file 'C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\resourcesUsedTC.robot' on line 2: Resource file '\Resources\Amazon.robot' does not exist.</msg>
-<msg timestamp="20220617 17:09:21.151" level="ERROR">Error in file 'C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\resourcesUsedTC.robot' on line 3: Resource file '\Resources\Common.robot' does not exist.</msg>
 </errors>
 </robot>
