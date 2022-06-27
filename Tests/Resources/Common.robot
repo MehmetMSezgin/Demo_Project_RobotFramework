@@ -1,9 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+
+
 *** Keywords ***
 Begin webtest
-    open browser    https://www.amazon.de/-/en/ref=nav_logo    chrome
+    open browser    ${URL}    ${BROWSER}         ##    ##it is complaining because I defined variable in resourcesUsedTC.robot     --- But it works
     maximize browser window
 
 End webtest

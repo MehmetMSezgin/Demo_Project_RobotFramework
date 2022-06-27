@@ -1,155 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220621 11:39:25.586" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220627 12:39:31.469" rpa="false" schemaversion="3">
 <suite id="s1" name="Item added" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Item_added.robot">
 <test id="s1-t1" name="Should be able to search for product" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.amazon.de/-/en/ref=nav_logo</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220621 11:39:25.796" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<status status="PASS" starttime="20220621 11:39:25.788" endtime="20220621 11:39:28.219"/>
+<msg timestamp="20220627 12:39:31.845" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
+<status status="PASS" starttime="20220627 12:39:31.844" endtime="20220627 12:39:35.815"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220621 11:39:28.219" endtime="20220621 11:39:28.342"/>
+<status status="PASS" starttime="20220627 12:39:35.815" endtime="20220627 12:39:35.937"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220621 11:39:31.348" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220621 11:39:28.342" endtime="20220621 11:39:31.348"/>
+<msg timestamp="20220627 12:39:38.941" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220627 12:39:35.938" endtime="20220627 12:39:38.941"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=sp-cc-accept</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220621 11:39:31.348" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
-<status status="PASS" starttime="20220621 11:39:31.348" endtime="20220621 11:39:31.407"/>
+<msg timestamp="20220627 12:39:38.941" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
+<status status="PASS" starttime="20220627 12:39:38.941" endtime="20220627 12:39:39.004"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=twotabsearchtextbox</arg>
 <arg>Nba hoodie zipper</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220621 11:39:31.409" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20220621 11:39:31.408" endtime="20220621 11:39:31.503"/>
+<msg timestamp="20220627 12:39:39.005" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220627 12:39:39.004" endtime="20220627 12:39:39.106"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=//input[@id='nav-search-submit-button']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220621 11:39:31.503" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
-<status status="PASS" starttime="20220621 11:39:31.503" endtime="20220621 11:39:32.848"/>
+<msg timestamp="20220627 12:39:39.107" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
+<status status="PASS" starttime="20220627 12:39:39.106" endtime="20220627 12:39:41.057"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220621 11:39:35.861" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220621 11:39:32.848" endtime="20220621 11:39:35.861"/>
+<msg timestamp="20220627 12:39:44.065" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220627 12:39:41.058" endtime="20220627 12:39:44.065"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220621 11:39:35.861" endtime="20220621 11:39:35.893"/>
+<status status="PASS" starttime="20220627 12:39:44.065" endtime="20220627 12:39:44.093"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220621 11:39:35.893" level="INFO">Clicking element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span'.</msg>
-<msg timestamp="20220621 11:39:37.078" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220621 11:39:37.080" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="a-size-base-plus a-color-base a-text-normal"&gt;...&lt;/span&gt; is not clickable at point (1352, 506). Other element would receive the click: &lt;form id="sp-cc" method="post" action="/privacyprefs/retail/v1/acceptall"&gt;...&lt;/form&gt;
-  (Session info: chrome=102.0.5005.115)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x007CB8F3+2406643]
-	Ordinal0 [0x0075AF31+1945393]
-	Ordinal0 [0x0064C748+837448]
-	Ordinal0 [0x0067FA1B+1047067]
-	Ordinal0 [0x0067D9F8+1038840]
-	Ordinal0 [0x0067B6DB+1029851]
-	Ordinal0 [0x0067A439+1025081]
-	Ordinal0 [0x00670083+983171]
-	Ordinal0 [0x0069427C+1131132]
-	Ordinal0 [0x0066FA64+981604]
-	Ordinal0 [0x00694494+1131668]
-	Ordinal0 [0x006A4682+1197698]
-	Ordinal0 [0x00694096+1130646]
-	Ordinal0 [0x0066E636+976438]
-	Ordinal0 [0x0066F546+980294]
-	GetHandleVerifier [0x00A39612+2498066]
-	GetHandleVerifier [0x00A2C920+2445600]
-	GetHandleVerifier [0x00864F2A+579370]
-	GetHandleVerifier [0x00863D36+574774]
-	Ordinal0 [0x00761C0B+1973259]
-	Ordinal0 [0x00766688+1992328]
-	Ordinal0 [0x00766775+1992565]
-	Ordinal0 [0x0076F8D1+2029777]
-	BaseThreadInitThunk [0x75E4FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77D07A7E+286]
-	RtlGetAppContainerNamedObjectPath [0x77D07A4E+238]
-</msg>
-<status status="FAIL" starttime="20220621 11:39:35.893" endtime="20220621 11:39:37.114"/>
+<msg timestamp="20220627 12:39:44.093" level="INFO">Clicking element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span'.</msg>
+<status status="PASS" starttime="20220627 12:39:44.093" endtime="20220627 12:39:47.139"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>id=add-to-cart-button</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220621 11:39:37.114" endtime="20220621 11:39:37.114"/>
+<status status="PASS" starttime="20220627 12:39:47.140" endtime="20220627 12:39:47.147"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@class='a-button-text a-text-left']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220621 11:39:37.114" endtime="20220621 11:39:37.114"/>
+<msg timestamp="20220627 12:39:47.148" level="INFO">Clicking element 'xpath=//a[@class='a-button-text a-text-left']'.</msg>
+<status status="PASS" starttime="20220627 12:39:47.147" endtime="20220627 12:39:47.672"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Sign In</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220621 11:39:37.114" endtime="20220621 11:39:37.114"/>
+<status status="PASS" starttime="20220627 12:39:47.673" endtime="20220627 12:39:47.687"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220621 11:39:37.114" endtime="20220621 11:39:37.114"/>
+<status status="PASS" starttime="20220627 12:39:47.687" endtime="20220627 12:39:49.835"/>
 </kw>
 <tag>addItem</tag>
-<status status="FAIL" starttime="20220621 11:39:25.788" endtime="20220621 11:39:37.114">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span class="a-size-base-plus a-color-base a-text-normal"&gt;...&lt;/span&gt; is not clickable at point (1352, 506). Other element would receive the click: &lt;form id="sp-cc" method="post" action="/privacyprefs/retail/v1/acceptall"&gt;...&lt;/form&gt;
-  (Session info: chrome=102.0.5005.115)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x007CB8F3+2406643]
-	Ordinal0 [0x0075AF31+1945393]
-	Ordinal0 [0x0064C748+837448]
-	Ordinal0 [0x0067FA1B+1047067]
-	Ordinal0 [0x0067D9F8+1038840]
-	Ordinal0 [0x0067B6DB+1029851]
-	Ordinal0 [0x0067A439+1025081]
-	Ordinal0 [0x00670083+983171]
-	Ordinal0 [0x0069427C+1131132]
-	Ordinal0 [0x0066FA64+981604]
-	Ordinal0 [0x00694494+1131668]
-	Ordinal0 [0x006A4682+1197698]
-	Ordinal0 [0x00694096+1130646]
-	Ordinal0 [0x0066E636+976438]
-	Ordinal0 [0x0066F546+980294]
-	GetHandleVerifier [0x00A39612+2498066]
-	GetHandleVerifier [0x00A2C920+2445600]
-	GetHandleVerifier [0x00864F2A+579370]
-	GetHandleVerifier [0x00863D36+574774]
-	Ordinal0 [0x00761C0B+1973259]
-	Ordinal0 [0x00766688+1992328]
-	Ordinal0 [0x00766775+1992565]
-	Ordinal0 [0x0076F8D1+2029777]
-	BaseThreadInitThunk [0x75E4FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77D07A7E+286]
-	RtlGetAppContainerNamedObjectPath [0x77D07A4E+238]
-</status>
+<status status="PASS" starttime="20220627 12:39:31.843" endtime="20220627 12:39:49.836"/>
 </test>
-<status status="FAIL" starttime="20220621 11:39:25.586" endtime="20220621 11:39:37.114"/>
+<status status="PASS" starttime="20220627 12:39:31.471" endtime="20220627 12:39:49.836"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">addItem</stat>
+<stat pass="1" fail="0" skip="0">addItem</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Item added">Item added</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Item added">Item added</stat>
 </suite>
 </statistics>
 <errors>

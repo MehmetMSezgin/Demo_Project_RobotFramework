@@ -1,6 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    PO/TopNav.robot
+Resource    PO/loginPage.robot
+
+*** Variables ***
+${PRODUCT} =    xpath=//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]
+
 *** Keywords ***
 Search for products
     [Documentation]    Here one object model has been used as example
@@ -8,10 +13,13 @@ Search for products
     click button    id=sp-cc-accept
     TopNav.Write product name and click
     sleep    3s
-    wait until element is visible    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span
+    wait until element is visible    ${PRODUCT}
 
+Verify search completed
+    wait until page contains    results for "${SEARCH_TERM}"                #write variable in double quote.
+    ##it is complaining because I defined variable in resourcesUsedTC.robot     --- But it works
 Select product
-    click element    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span
+    click element    ${PRODUCT}
     wait until page contains element    id=add-to-cart-button
 
 Add product to chart
@@ -29,3 +37,7 @@ User searches and add product to cart
 
 User is required to sign in
     page should contain    Sign In
+
+Login
+    [Arguments]    ${EMAIL}
+    loginPage.use credentials    ${EMAIL}

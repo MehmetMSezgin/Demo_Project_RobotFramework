@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220621 11:27:20.168" rpa="false" schemaversion="3">
-<suite id="s1" name="Scalar Variables" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Scalar_Variables.robot">
-<test id="s1-t1" name="Variable demonstration" line="7">
-<kw name="Log" library="BuiltIn">
-<arg>${MY_VARIABLE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220621 11:27:20.188" level="INFO">HELLO</msg>
-<status status="PASS" starttime="20220621 11:27:20.188" endtime="20220621 11:27:20.188"/>
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220627 16:50:03.415" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\login.robot">
+<test id="s1-t1" name="User should not able to login" line="15">
+<kw name="Begin webtest" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220627 16:50:03.714" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fyour-account%3Fref_%3Dnav_ya_signin&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=usflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;'.</msg>
+<status status="PASS" starttime="20220627 16:50:03.710" endtime="20220627 16:50:06.272"/>
 </kw>
-<status status="PASS" starttime="20220621 11:27:20.188" endtime="20220621 11:27:20.188"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220627 16:50:06.274" endtime="20220627 16:50:06.407"/>
+</kw>
+<status status="PASS" starttime="20220627 16:50:03.710" endtime="20220627 16:50:06.411"/>
+</kw>
+<kw name="Login" library="Amazon">
+<arg>${EMAIL}</arg>
+<kw name="use credentials" library="loginPage">
+<arg>${EMAIL}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:ap_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220627 16:50:06.414" level="INFO">Typing text 'mms@finland.com' into text field 'id:ap_email'.</msg>
+<status status="PASS" starttime="20220627 16:50:06.414" endtime="20220627 16:50:06.791"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220627 16:50:09.798" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220627 16:50:06.791" endtime="20220627 16:50:09.798"/>
+</kw>
+<status status="PASS" starttime="20220627 16:50:06.414" endtime="20220627 16:50:09.798"/>
+</kw>
+<status status="PASS" starttime="20220627 16:50:06.411" endtime="20220627 16:50:09.798"/>
+</kw>
+<kw name="End webtest" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220627 16:50:09.802" endtime="20220627 16:50:11.949"/>
+</kw>
+<status status="PASS" starttime="20220627 16:50:09.798" endtime="20220627 16:50:11.949"/>
+</kw>
+<status status="PASS" starttime="20220627 16:50:03.710" endtime="20220627 16:50:11.949"/>
 </test>
-<status status="PASS" starttime="20220621 11:27:20.183" endtime="20220621 11:27:20.188"/>
+<status status="PASS" starttime="20220627 16:50:03.419" endtime="20220627 16:50:11.953"/>
 </suite>
 <statistics>
 <total>
@@ -19,7 +55,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Scalar Variables">Scalar Variables</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>

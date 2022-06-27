@@ -9,7 +9,7 @@ ${MY_VARIABLE} =    HELLO
 *** Test Cases ***
 Set a variable in the test case
     ${my_new_variable} =    Set variable    Something...
-    Log    ${my_new_variable}
+    Log    ${my_new_variable}         #syntax for retrieving
 
 Variable demonstration
     Log     ${MY_VARIABLE}
