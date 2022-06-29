@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    PO/TopNav.robot
-Resource    PO/loginPage.robot
+Resource    ./PO/TopNav.robot        #it means stay in the smae directory but go into PO
+Resource    PO/loginPage.robot          #you can use without '.' as well
 
 *** Variables ***
 ${PRODUCT} =    xpath=//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]

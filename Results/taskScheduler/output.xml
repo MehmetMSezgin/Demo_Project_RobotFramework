@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220627 12:39:31.469" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220629 11:39:29.502" rpa="false" schemaversion="3">
 <suite id="s1" name="Item added" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Item_added.robot">
 <test id="s1-t1" name="Should be able to search for product" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.amazon.de/-/en/ref=nav_logo</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220627 12:39:31.845" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<status status="PASS" starttime="20220627 12:39:31.844" endtime="20220627 12:39:35.815"/>
+<msg timestamp="20220629 11:39:30.458" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
+<status status="PASS" starttime="20220629 11:39:30.458" endtime="20220629 11:39:34.106"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220627 12:39:35.815" endtime="20220627 12:39:35.937"/>
+<status status="PASS" starttime="20220629 11:39:34.106" endtime="20220629 11:39:34.240"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220627 12:39:38.941" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220627 12:39:35.938" endtime="20220627 12:39:38.941"/>
+<msg timestamp="20220629 11:39:37.244" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220629 11:39:34.242" endtime="20220629 11:39:37.244"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=sp-cc-accept</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220627 12:39:38.941" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
-<status status="PASS" starttime="20220627 12:39:38.941" endtime="20220627 12:39:39.004"/>
+<msg timestamp="20220629 11:39:37.245" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
+<status status="PASS" starttime="20220629 11:39:37.245" endtime="20220629 11:39:37.371"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=twotabsearchtextbox</arg>
 <arg>Nba hoodie zipper</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220627 12:39:39.005" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20220627 12:39:39.004" endtime="20220627 12:39:39.106"/>
+<msg timestamp="20220629 11:39:37.371" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220629 11:39:37.371" endtime="20220629 11:39:37.576"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=//input[@id='nav-search-submit-button']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220627 12:39:39.107" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
-<status status="PASS" starttime="20220627 12:39:39.106" endtime="20220627 12:39:41.057"/>
+<msg timestamp="20220629 11:39:37.578" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
+<status status="PASS" starttime="20220629 11:39:37.578" endtime="20220629 11:39:39.335"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220627 12:39:44.065" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220627 12:39:41.058" endtime="20220627 12:39:44.065"/>
+<msg timestamp="20220629 11:39:42.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220629 11:39:39.335" endtime="20220629 11:39:42.339"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220627 12:39:44.065" endtime="20220627 12:39:44.093"/>
+<msg timestamp="20220629 11:39:47.907" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220629 11:39:47.915" level="FAIL">Element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220629 11:39:42.342" endtime="20220629 11:39:47.986"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220627 12:39:44.093" level="INFO">Clicking element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span'.</msg>
-<status status="PASS" starttime="20220627 12:39:44.093" endtime="20220627 12:39:47.139"/>
+<status status="NOT RUN" starttime="20220629 11:39:47.994" endtime="20220629 11:39:47.994"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>id=add-to-cart-button</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220627 12:39:47.140" endtime="20220627 12:39:47.147"/>
+<status status="NOT RUN" starttime="20220629 11:39:47.994" endtime="20220629 11:39:47.994"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[@class='a-button-text a-text-left']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220627 12:39:47.148" level="INFO">Clicking element 'xpath=//a[@class='a-button-text a-text-left']'.</msg>
-<status status="PASS" starttime="20220627 12:39:47.147" endtime="20220627 12:39:47.672"/>
+<status status="NOT RUN" starttime="20220629 11:39:47.997" endtime="20220629 11:39:47.997"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Sign In</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220627 12:39:47.673" endtime="20220627 12:39:47.687"/>
+<status status="NOT RUN" starttime="20220629 11:39:47.997" endtime="20220629 11:39:47.997"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220627 12:39:47.687" endtime="20220627 12:39:49.835"/>
+<status status="NOT RUN" starttime="20220629 11:39:47.997" endtime="20220629 11:39:47.997"/>
 </kw>
 <tag>addItem</tag>
-<status status="PASS" starttime="20220627 12:39:31.843" endtime="20220627 12:39:49.836"/>
+<status status="FAIL" starttime="20220629 11:39:30.452" endtime="20220629 11:39:48.002">Element 'xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span' not visible after 5 seconds.</status>
 </test>
-<status status="PASS" starttime="20220627 12:39:31.471" endtime="20220627 12:39:49.836"/>
+<status status="FAIL" starttime="20220629 11:39:29.519" endtime="20220629 11:39:48.006"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">addItem</stat>
+<stat pass="0" fail="1" skip="0">addItem</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Item added">Item added</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Item added">Item added</stat>
 </suite>
 </statistics>
 <errors>
