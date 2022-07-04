@@ -18,6 +18,7 @@ Search for products
 Verify search completed
     wait until page contains    results for "${SEARCH_TERM}"                #write variable in double quote.
     ##it is complaining because I defined variable in resourcesUsedTC.robot     --- But it works
+    [Return]    Completed!!!
 Select product
     click element    ${PRODUCT}
     wait until page contains element    id=add-to-cart-button
