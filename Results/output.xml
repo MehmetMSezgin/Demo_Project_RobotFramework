@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220704 12:50:23.533" rpa="false" schemaversion="3">
-<suite id="s1" name="Python" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\python.robot">
-<test id="s1-t1" name="tc1" line="12">
-<kw name="Begin webtest" library="Common" type="SETUP">
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220708 14:39:49.977" rpa="false" schemaversion="3">
+<suite id="s1" name="Dictionaries" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\dictionaries.robot">
+<test id="s1-t1" name="dictionary test" line="12">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
+<arg>${URL.${WEBPAGE}}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220704 12:50:23.689" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<status status="PASS" starttime="20220704 12:50:23.689" endtime="20220704 12:50:26.323"/>
+<msg timestamp="20220708 14:39:50.131" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220708 14:39:50.131" endtime="20220708 14:39:53.752"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220704 12:50:26.323" endtime="20220704 12:50:26.444"/>
-</kw>
-<status status="PASS" starttime="20220704 12:50:23.689" endtime="20220704 12:50:26.445"/>
-</kw>
-<kw name="Python Function" library="myPythonLibrary">
-<msg timestamp="20220704 12:50:26.445" level="INFO">Python function</msg>
-<status status="PASS" starttime="20220704 12:50:26.445" endtime="20220704 12:50:26.445"/>
-</kw>
-<kw name="End webtest" library="Common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220704 12:50:26.446" endtime="20220704 12:50:28.520"/>
+<status status="PASS" starttime="20220708 14:39:53.753" endtime="20220708 14:39:55.822"/>
 </kw>
-<status status="PASS" starttime="20220704 12:50:26.446" endtime="20220704 12:50:28.520"/>
-</kw>
-<status status="PASS" starttime="20220704 12:50:23.689" endtime="20220704 12:50:28.520"/>
+<status status="PASS" starttime="20220708 14:39:50.131" endtime="20220708 14:39:55.822"/>
 </test>
-<status status="PASS" starttime="20220704 12:50:23.533" endtime="20220704 12:50:28.520"/>
+<status status="PASS" starttime="20220708 14:39:49.977" endtime="20220708 14:39:55.822"/>
 </suite>
 <statistics>
 <total>
@@ -38,7 +24,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Python">Python</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Dictionaries">Dictionaries</stat>
 </suite>
 </statistics>
 <errors>

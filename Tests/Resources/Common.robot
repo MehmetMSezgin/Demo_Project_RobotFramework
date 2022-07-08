@@ -9,6 +9,7 @@ Begin webtest
     maximize browser window
 
 End webtest
+    sleep    3s
     close browser
 
 Insert Testing data
