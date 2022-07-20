@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220720 13:31:54.495" rpa="false" schemaversion="3">
+<suite id="s1" name="DDTest" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Data_Driven\Tests\DDTest.robot">
+<kw name="Start Testcase" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220720 13:31:54.973" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20220720 13:31:54.973" endtime="20220720 13:31:57.117"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220720 13:31:57.117" endtime="20220720 13:31:57.249"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:54.973" endtime="20220720 13:31:57.249"/>
+</kw>
+<test id="s1-t1" name="Verify login fails with invalid credentials" line="19">
+<kw name="Invalid login scenarios">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<arg>Epic sadface: Sorry, this user has been locked out.</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:57.264" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20220720 13:31:57.264" endtime="20220720 13:31:57.406"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:57.409" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220720 13:31:57.409" endtime="20220720 13:31:57.484"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:57.484" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20220720 13:31:57.484" endtime="20220720 13:31:57.534"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220720 13:31:59.557" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220720 13:31:57.534" endtime="20220720 13:31:59.557"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220720 13:31:59.588" level="INFO">Element 'xpath=//*[@id="login_button_container"]//h3' contains text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<status status="PASS" starttime="20220720 13:31:59.557" endtime="20220720 13:31:59.588"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:57.264" endtime="20220720 13:31:59.588"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:57.249" endtime="20220720 13:31:59.590"/>
+</test>
+<test id="s1-t2" name="Verify login fails with invalid credentials" line="19">
+<kw name="Invalid login scenarios">
+<arg>standard_user</arg>
+<arg>secret_sauc</arg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:59.598" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20220720 13:31:59.598" endtime="20220720 13:31:59.701"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:59.702" level="INFO">Typing text 'secret_sauc' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20220720 13:31:59.702" endtime="20220720 13:31:59.798"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220720 13:31:59.798" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20220720 13:31:59.798" endtime="20220720 13:31:59.857"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220720 13:32:01.868" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220720 13:31:59.857" endtime="20220720 13:32:01.868"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220720 13:32:01.897" level="INFO">Element 'xpath=//*[@id="login_button_container"]//h3' contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20220720 13:32:01.868" endtime="20220720 13:32:01.897"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:59.598" endtime="20220720 13:32:01.897"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:59.590" endtime="20220720 13:32:01.899"/>
+</test>
+<kw name="Finish Testcase" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220720 13:32:01.899" endtime="20220720 13:32:04.055"/>
+</kw>
+<status status="PASS" starttime="20220720 13:32:01.899" endtime="20220720 13:32:04.055"/>
+</kw>
+<status status="PASS" starttime="20220720 13:31:54.507" endtime="20220720 13:32:04.055"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="DDTest">DDTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220720 13:31:59.590" level="WARN">Multiple tests with name 'Verify login fails with invalid credentials' executed in suite 'DDTest'.</msg>
+</errors>
+</robot>
