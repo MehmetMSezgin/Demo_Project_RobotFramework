@@ -10,6 +10,7 @@ User must sign in to check out
     Add product to chart
     End webtest
 
+
 *** Keywords ***
 Begin webtest
     open browser    https://www.amazon.de/-/en/ref=nav_logo    chrome
