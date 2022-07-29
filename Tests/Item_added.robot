@@ -1,6 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-*** Variables ***
+Resource    Resources/Common.robot
+Test Teardown    End webtest
+
 
 *** Test Cases ***
 Should be able to search for product
@@ -15,7 +17,5 @@ Should be able to search for product
     wait until element is enabled    xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]
     click element    xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]
     wait until page contains element    id=add-to-cart-button
-    click element    xpath=//a[@class='a-button-text a-text-left']
+    click element    xpath=//a[@title='Add to List']
     wait until page contains    Sign In
-    close browser
-*** Keywords ***
