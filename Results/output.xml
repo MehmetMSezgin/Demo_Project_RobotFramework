@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 5.0 (Python 3.7.4 on win32)" generated="20241004 15:19:00.224" rpa="false" schemaversion="3">
 <suite id="s1" name="resourcesUsedTC" source="C:\Users\Mehme\PycharmProjects\Demo_Project_RobotFramework\Tests\resourcesUsedTC.robot">
 <kw name="Insert Testing data" library="Common" type="SETUP">
@@ -506,12 +507,95 @@ AssertionError: Page should have contained text 'Hello, Sign in' but did not.</m
 <status status="PASS" starttime="20241004 15:19:48.118" endtime="20241004 15:19:48.119"/>
 </kw>
 <status status="FAIL" starttime="20241004 15:19:00.225" endtime="20241004 15:19:48.119"/>
+=======
+<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220728 11:50:53.195" rpa="false" schemaversion="3">
+<suite id="s1" name="Item added" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Item_added.robot">
+<test id="s1-t1" name="Should be able to search for product" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.de/-/en/ref=nav_logo</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220728 11:50:53.455" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
+<status status="PASS" starttime="20220728 11:50:53.455" endtime="20220728 11:50:58.501"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220728 11:50:58.501" endtime="20220728 11:50:58.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220728 11:51:01.655" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220728 11:50:58.644" endtime="20220728 11:51:01.655"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=sp-cc-accept</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220728 11:51:01.655" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
+<status status="PASS" starttime="20220728 11:51:01.655" endtime="20220728 11:51:01.768"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>Nba hoodie zipper</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220728 11:51:01.768" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220728 11:51:01.768" endtime="20220728 11:51:01.954"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@id='nav-search-submit-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220728 11:51:01.954" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
+<status status="PASS" starttime="20220728 11:51:01.954" endtime="20220728 11:51:03.521"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220728 11:51:06.528" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220728 11:51:03.524" endtime="20220728 11:51:06.529"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220728 11:51:06.530" endtime="20220728 11:51:06.615"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220728 11:51:06.615" level="INFO">Clicking element 'xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]'.</msg>
+<status status="PASS" starttime="20220728 11:51:06.615" endtime="20220728 11:51:08.234"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220728 11:51:08.234" endtime="20220728 11:51:08.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class='a-button-text a-text-left']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220728 11:51:08.255" level="INFO">Clicking element 'xpath=//a[@class='a-button-text a-text-left']'.</msg>
+<status status="PASS" starttime="20220728 11:51:08.255" endtime="20220728 11:51:08.845"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sign In</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220728 11:51:08.846" endtime="20220728 11:51:08.880"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220728 11:51:08.880" endtime="20220728 11:51:11.044"/>
+</kw>
+<tag>addItem</tag>
+<status status="PASS" starttime="20220728 11:50:53.455" endtime="20220728 11:51:11.044"/>
+</test>
+<status status="PASS" starttime="20220728 11:50:53.200" endtime="20220728 11:51:11.044"/>
+>>>>>>> e66eb882e8aec444845fc41df02e0909c7e6d053
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
+<<<<<<< HEAD
 <stat pass="0" fail="1" skip="0">cmd</stat>
 <stat pass="0" fail="1" skip="0">Gherkin</stat>
 <stat pass="0" fail="1" skip="0">Smoke</stat>
@@ -519,6 +603,12 @@ AssertionError: Page should have contained text 'Hello, Sign in' but did not.</m
 </tag>
 <suite>
 <stat pass="1" fail="3" skip="0" id="s1" name="resourcesUsedTC">resourcesUsedTC</stat>
+=======
+<stat pass="1" fail="0" skip="0">addItem</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Item added">Item added</stat>
+>>>>>>> e66eb882e8aec444845fc41df02e0909c7e6d053
 </suite>
 </statistics>
 <errors>

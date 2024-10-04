@@ -1,6 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
-*** Variables ***
+Resource    Resources/Common.robot
+Test Teardown    End webtest
+
 
 *** Test Cases ***
 Should be able to search for product
@@ -12,10 +14,8 @@ Should be able to search for product
     input text    id=twotabsearchtextbox    Nba hoodie zipper
     click button    xpath=//input[@id='nav-search-submit-button']
     sleep    3s
-    wait until element is visible    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span
-    click element    xpath=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/div[1]/h2/a/span
+    wait until element is enabled    xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]
+    click element    xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]
     wait until page contains element    id=add-to-cart-button
-    click element    xpath=//a[@class='a-button-text a-text-left']
+    click element    xpath=//a[@title='Add to List']
     wait until page contains    Sign In
-    close browser
-*** Keywords ***
