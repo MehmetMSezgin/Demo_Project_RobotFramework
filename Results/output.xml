@@ -1,614 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 5.0 (Python 3.7.4 on win32)" generated="20241004 15:19:00.224" rpa="false" schemaversion="3">
-<suite id="s1" name="resourcesUsedTC" source="C:\Users\Mehme\PycharmProjects\Demo_Project_RobotFramework\Tests\resourcesUsedTC.robot">
-<kw name="Insert Testing data" library="Common" type="SETUP">
-<kw name="Log" library="BuiltIn">
-<arg>setting up test data...</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20241004 15:19:00.373" level="INFO">setting up test data...</msg>
-<status status="PASS" starttime="20241004 15:19:00.373" endtime="20241004 15:19:00.373"/>
-</kw>
-<kw name="keyword1" library="Common">
-<kw name="Log" library="BuiltIn">
-<arg>keyword1...</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20241004 15:19:00.373" level="INFO">keyword1...</msg>
-<status status="PASS" starttime="20241004 15:19:00.373" endtime="20241004 15:19:00.373"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:00.373" endtime="20241004 15:19:00.374"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:00.373" endtime="20241004 15:19:00.374"/>
-</kw>
-<test id="s1-t1" name="Try out" line="17">
-<kw name="Begin webtest" library="Common" type="SETUP">
+<robot generator="Robot 5.0 (Python 3.7.4 on win32)" generated="20241005 19:14:58.034" rpa="false" schemaversion="3">
+<suite id="s1" name="Legal entity creation" source="C:\Users\Mehme\PycharmProjects\Demo_Project_RobotFramework\Tax_platform\Legal_entity_creation.robot">
+<test id="s1-t1" name="Verify legal entity creation" line="16">
+<kw name="Test specific setup" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241004 15:19:00.375" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<status status="PASS" starttime="20241004 15:19:00.375" endtime="20241004 15:19:02.264"/>
+<msg timestamp="20241005 19:14:58.180" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/auth/login'.</msg>
+<status status="PASS" starttime="20241005 19:14:58.179" endtime="20241005 19:15:01.160"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20241004 15:19:02.264" endtime="20241004 15:19:02.296"/>
+<status status="PASS" starttime="20241005 19:15:01.160" endtime="20241005 19:15:01.180"/>
 </kw>
-<status status="PASS" starttime="20241004 15:19:00.374" endtime="20241004 15:19:02.296"/>
+<status status="PASS" starttime="20241005 19:14:58.179" endtime="20241005 19:15:01.180"/>
 </kw>
-<kw name="Set Log Level" library="BuiltIn">
-<arg>debug</arg>
-<doc>Sets the log threshold to the specified level and returns the old level.</doc>
-<msg timestamp="20241004 15:19:02.296" level="INFO">Log level changed from INFO to DEBUG.</msg>
-<status status="PASS" starttime="20241004 15:19:02.296" endtime="20241004 15:19:02.296"/>
-</kw>
-<kw name="End webtest" library="Common" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:05.303" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:02.297" endtime="20241004 15:19:05.303"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20241004 15:19:05.303" level="DEBUG">Closing browser with session id a85f609eb51f9501175e6c057e62923f.</msg>
-<msg timestamp="20241004 15:19:05.303" level="DEBUG">DELETE http://localhost:52313/session/a85f609eb51f9501175e6c057e62923f {}</msg>
-<msg timestamp="20241004 15:19:05.365" level="DEBUG">http://localhost:52313 "DELETE /session/a85f609eb51f9501175e6c057e62923f HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:05.365" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:05.303" endtime="20241004 15:19:07.432"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:02.297" endtime="20241004 15:19:07.432"/>
-</kw>
-<tag>tryOut</tag>
-<status status="PASS" starttime="20241004 15:19:00.374" endtime="20241004 15:19:07.433"/>
-</test>
-<test id="s1-t2" name="User must sign in to check out" line="21">
-<kw name="Begin webtest" library="Common" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241004 15:19:07.436" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<msg timestamp="20241004 15:19:07.971" level="DEBUG">POST http://localhost:52342/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
-<msg timestamp="20241004 15:19:07.972" level="DEBUG">Starting new HTTP connection (1): localhost:52342</msg>
-<msg timestamp="20241004 15:19:08.495" level="DEBUG">http://localhost:52342 "POST /session HTTP/1.1" 200 882</msg>
-<msg timestamp="20241004 15:19:08.495" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:08.495" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/timeouts {"script": 5000}</msg>
-<msg timestamp="20241004 15:19:08.496" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:08.496" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:08.496" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/timeouts {"implicit": 0}</msg>
-<msg timestamp="20241004 15:19:08.497" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:08.497" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:08.497" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/url {"url": "https://www.amazon.de/-/en/ref=nav_logo"}</msg>
-<msg timestamp="20241004 15:19:09.129" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:09.129" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:09.129" level="DEBUG">Opened browser with session id 925b5a7a1a2443f44a9b90013cde26ec.</msg>
-<status status="PASS" starttime="20241004 15:19:07.436" endtime="20241004 15:19:09.129"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<msg timestamp="20241004 15:19:09.130" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/window/maximize {}</msg>
-<msg timestamp="20241004 15:19:09.164" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/window/maximize HTTP/1.1" 200 52</msg>
-<msg timestamp="20241004 15:19:09.164" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:09.130" endtime="20241004 15:19:09.164"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:07.436" endtime="20241004 15:19:09.164"/>
-</kw>
-<kw name="Search for products" library="Amazon">
-<doc>Here one object model has been used as example</doc>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:12.171" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:09.165" endtime="20241004 15:19:12.171"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=sp-cc-accept</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20241004 15:19:12.172" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
-<msg timestamp="20241004 15:19:12.172" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/elements {"using": "css selector", "value": "[id=\"sp-cc-accept\"]"}</msg>
-<msg timestamp="20241004 15:19:12.183" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:12.183" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:12.183" level="DEBUG">POST http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/elements {"using": "css selector", "value": "[id=\"sp-cc-accept\"]"}</msg>
-<msg timestamp="20241004 15:19:12.188" level="DEBUG">http://localhost:52342 "POST /session/925b5a7a1a2443f44a9b90013cde26ec/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:12.188" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:12.188" level="DEBUG">GET http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec/screenshot {}</msg>
-<msg timestamp="20241004 15:19:12.397" level="DEBUG">http://localhost:52342 "GET /session/925b5a7a1a2443f44a9b90013cde26ec/screenshot HTTP/1.1" 200 1308212</msg>
-<msg timestamp="20241004 15:19:12.424" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:12.430" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20241004 15:19:12.430" level="FAIL">Button with locator 'id=sp-cc-accept' not found.</msg>
-<msg timestamp="20241004 15:19:12.469" level="DEBUG">Traceback (most recent call last):
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\__init__.py", line 496, in run_keyword
-    return DynamicCore.run_keyword(self, name, args, kwargs)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\robotlibcore.py", line 94, in run_keyword
-    return self.keywords[name](*args, **(kwargs or {}))
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\keywords\element.py", line 565, in click_button
-    element = self.find_element(locator, tag="button")
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\base\context.py", line 82, in find_element
-    return self.element_finder.find(locator, tag, True, required, parent)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 93, in find
-    return self._find(locators[-1], tag, first_only, required, element)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\locators\elementfinder.py", line 125, in _find
-    raise ElementNotFound(f"{element_type} with locator '{locator}' not found.")
-SeleniumLibrary.errors.ElementNotFound: Button with locator 'id=sp-cc-accept' not found.</msg>
-<status status="FAIL" starttime="20241004 15:19:12.171" endtime="20241004 15:19:12.469"/>
-</kw>
-<kw name="Write product name and click" library="TopNav">
-<status status="NOT RUN" starttime="20241004 15:19:12.469" endtime="20241004 15:19:12.469"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20241004 15:19:12.469" endtime="20241004 15:19:12.469"/>
+<kw name="Log" library="BuiltIn">
+<arg>Browser opened and navigated to Demo-orange</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20241005 19:15:01.180" level="INFO">Browser opened and navigated to Demo-orange</msg>
+<status status="PASS" starttime="20241005 19:15:01.180" endtime="20241005 19:15:01.181"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PRODUCT}</arg>
+<arg>xpath=${input_username}</arg>
+<arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20241004 15:19:12.469" endtime="20241004 15:19:12.469"/>
+<status status="PASS" starttime="20241005 19:15:01.181" endtime="20241005 19:15:01.448"/>
 </kw>
-<status status="FAIL" starttime="20241004 15:19:09.164" endtime="20241004 15:19:12.469"/>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20241005 19:15:01.451" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20241005 19:15:01.448" endtime="20241005 19:15:01.451"/>
 </kw>
-<kw name="Verify search completed" library="Amazon">
-<var>${ReturnedInfo}</var>
-<status status="NOT RUN" starttime="20241004 15:19:12.471" endtime="20241004 15:19:12.471"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${ReturnedInfo}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20241004 15:19:12.471" endtime="20241004 15:19:12.471"/>
-</kw>
-<kw name="Select product" library="Amazon">
-<status status="NOT RUN" starttime="20241004 15:19:12.471" endtime="20241004 15:19:12.471"/>
-</kw>
-<kw name="Add product to chart" library="Amazon">
-<status status="NOT RUN" starttime="20241004 15:19:12.471" endtime="20241004 15:19:12.471"/>
-</kw>
-<kw name="End webtest" library="Common" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:15.474" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:12.472" endtime="20241004 15:19:15.474"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20241004 15:19:15.474" level="DEBUG">Closing browser with session id 925b5a7a1a2443f44a9b90013cde26ec.</msg>
-<msg timestamp="20241004 15:19:15.474" level="DEBUG">DELETE http://localhost:52342/session/925b5a7a1a2443f44a9b90013cde26ec {}</msg>
-<msg timestamp="20241004 15:19:15.535" level="DEBUG">http://localhost:52342 "DELETE /session/925b5a7a1a2443f44a9b90013cde26ec HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:15.536" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:15.474" endtime="20241004 15:19:17.608"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:12.472" endtime="20241004 15:19:17.609"/>
-</kw>
-<doc>This is amazon must sign in test case</doc>
-<tag>Smoke</tag>
-<status status="FAIL" starttime="20241004 15:19:07.435" endtime="20241004 15:19:17.610">Button with locator 'id=sp-cc-accept' not found.</status>
-</test>
-<test id="s1-t3" name="Other test case" line="32">
-<kw name="Begin webtest" library="Common" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241004 15:19:17.612" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<msg timestamp="20241004 15:19:18.147" level="DEBUG">POST http://localhost:52376/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
-<msg timestamp="20241004 15:19:18.148" level="DEBUG">Starting new HTTP connection (1): localhost:52376</msg>
-<msg timestamp="20241004 15:19:18.738" level="DEBUG">http://localhost:52376 "POST /session HTTP/1.1" 200 881</msg>
-<msg timestamp="20241004 15:19:18.738" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:18.738" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/timeouts {"script": 5000}</msg>
-<msg timestamp="20241004 15:19:18.739" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:18.739" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:18.739" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/timeouts {"implicit": 0}</msg>
-<msg timestamp="20241004 15:19:18.739" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:18.740" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:18.740" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/url {"url": "https://www.amazon.de/-/en/ref=nav_logo"}</msg>
-<msg timestamp="20241004 15:19:20.129" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:20.130" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:20.130" level="DEBUG">Opened browser with session id edfd56878a1ee819649187f5fa8ec607.</msg>
-<status status="PASS" starttime="20241004 15:19:17.612" endtime="20241004 15:19:20.130"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<msg timestamp="20241004 15:19:20.130" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/window/maximize {}</msg>
-<msg timestamp="20241004 15:19:20.161" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/window/maximize HTTP/1.1" 200 52</msg>
-<msg timestamp="20241004 15:19:20.161" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:20.130" endtime="20241004 15:19:20.161"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:17.611" endtime="20241004 15:19:20.162"/>
-</kw>
-<kw name="Search for products" library="Amazon">
-<doc>Here one object model has been used as example</doc>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:23.177" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:20.162" endtime="20241004 15:19:23.177"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=sp-cc-accept</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20241004 15:19:23.177" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
-<msg timestamp="20241004 15:19:23.178" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "css selector", "value": "[id=\"sp-cc-accept\"]"}</msg>
-<msg timestamp="20241004 15:19:23.191" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 128</msg>
-<msg timestamp="20241004 15:19:23.191" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.191" level="DEBUG">GET http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55/name {"id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55"}</msg>
-<msg timestamp="20241004 15:19:23.195" level="DEBUG">http://localhost:52376 "GET /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55/name HTTP/1.1" 200 17</msg>
-<msg timestamp="20241004 15:19:23.195" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.195" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55/click {"id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55"}</msg>
-<msg timestamp="20241004 15:19:23.234" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.55/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:23.234" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:23.177" endtime="20241004 15:19:23.234"/>
-</kw>
-<kw name="Write product name and click" library="TopNav">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${SEARCH_BAR}</arg>
-<arg>${SEARCH_TERM}</arg>
+<arg>xpath=${input_username}</arg>
+<arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20241004 15:19:23.235" level="INFO">Typing text 'Nba Hoodie Zipper' into text field 'id=twotabsearchtextbox'.</msg>
-<msg timestamp="20241004 15:19:23.235" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "css selector", "value": "[id=\"twotabsearchtextbox\"]"}</msg>
-<msg timestamp="20241004 15:19:23.243" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 128</msg>
-<msg timestamp="20241004 15:19:23.243" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.243" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35/clear {"id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35"}</msg>
-<msg timestamp="20241004 15:19:23.264" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35/clear HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:23.264" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.264" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35/value {"text": "Nba Hoodie Zipper", "value": ["N", "b", "a", " ", "H", "o", "o", "d", "i", "e", " ", "Z", "i", "p", "p", "e", "r"], "id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35"}</msg>
-<msg timestamp="20241004 15:19:23.332" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.35/value HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:23.333" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:23.234" endtime="20241004 15:19:23.333"/>
+<msg timestamp="20241005 19:15:01.452" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<status status="PASS" starttime="20241005 19:15:01.452" endtime="20241005 19:15:01.499"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${SEARCH_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20241004 15:19:23.333" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
-<msg timestamp="20241004 15:19:23.333" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//input[@id='nav-search-submit-button']"}</msg>
-<msg timestamp="20241004 15:19:23.342" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 129</msg>
-<msg timestamp="20241004 15:19:23.342" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.342" level="DEBUG">GET http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185/name {"id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185"}</msg>
-<msg timestamp="20241004 15:19:23.345" level="DEBUG">http://localhost:52376 "GET /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185/name HTTP/1.1" 200 17</msg>
-<msg timestamp="20241004 15:19:23.345" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:23.345" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185/click {"id": "f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185"}</msg>
-<msg timestamp="20241004 15:19:26.472" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/element/f.635EF206530EC78A6EE7B1BEA9F391FA.d.7DE38597B8C33ECD8B0255CE4D099DD8.e.185/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:26.472" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:23.333" endtime="20241004 15:19:26.472"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=${input_password}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20241005 19:15:01.500" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@name='password']'.</msg>
+<status status="PASS" starttime="20241005 19:15:01.499" endtime="20241005 19:15:01.553"/>
 </kw>
-<status status="PASS" starttime="20241004 15:19:23.234" endtime="20241004 15:19:26.472"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:29.478" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:26.473" endtime="20241004 15:19:29.478"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241005 19:15:01.554" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20241005 19:15:01.554" endtime="20241005 19:15:02.642"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PRODUCT}</arg>
+<arg>xpath=${recruitment_button}</arg>
+<arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20241004 15:19:29.478" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:29.488" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:29.489" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:29.695" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:29.700" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:29.701" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:29.911" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:29.919" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:29.919" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:30.130" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:30.135" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:30.136" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:30.349" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:30.357" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:30.357" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:30.568" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:30.575" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:30.575" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:30.786" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:30.792" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:30.792" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:31.001" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:31.011" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:31.011" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:31.217" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:31.227" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:31.227" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:31.431" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:31.441" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:31.441" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:31.647" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:31.657" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:31.657" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:31.866" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:31.873" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:31.873" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:32.084" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:32.090" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:32.090" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:32.300" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:32.306" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:32.306" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:32.513" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:32.521" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:32.521" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:32.731" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:32.736" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:32.736" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:32.947" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:32.954" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:32.954" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:33.166" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:33.172" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:33.172" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:33.383" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:33.391" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:33.391" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:33.600" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:33.609" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:33.610" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:33.815" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:33.823" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:33.823" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:34.033" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:34.040" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:34.040" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:34.249" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:34.255" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:34.256" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:34.463" level="DEBUG">POST http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/elements {"using": "xpath", "value": "//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]"}</msg>
-<msg timestamp="20241004 15:19:34.469" level="DEBUG">http://localhost:52376 "POST /session/edfd56878a1ee819649187f5fa8ec607/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:34.469" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:34.679" level="DEBUG">GET http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607/screenshot {}</msg>
-<msg timestamp="20241004 15:19:34.882" level="DEBUG">http://localhost:52376 "GET /session/edfd56878a1ee819649187f5fa8ec607/screenshot HTTP/1.1" 200 1240344</msg>
-<msg timestamp="20241004 15:19:34.885" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:34.889" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20241004 15:19:34.889" level="FAIL">Element 'xpath=//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]' not visible after 5 seconds.</msg>
-<msg timestamp="20241004 15:19:34.908" level="DEBUG">Traceback (most recent call last):
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\__init__.py", line 496, in run_keyword
-    return DynamicCore.run_keyword(self, name, args, kwargs)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\robotlibcore.py", line 94, in run_keyword
-    return self.keywords[name](*args, **(kwargs or {}))
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 318, in wait_until_element_is_visible
-    error,
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 426, in _wait_until
-    self._wait_until_worker(condition, timeout, error)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\keywords\waiting.py", line 443, in _wait_until_worker
-    raise AssertionError(not_found or error)
-AssertionError: Element 'xpath=//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20241004 15:19:29.478" endtime="20241004 15:19:34.908"/>
+<status status="PASS" starttime="20241005 19:15:02.642" endtime="20241005 19:15:03.084"/>
 </kw>
-<status status="FAIL" starttime="20241004 15:19:20.162" endtime="20241004 15:19:34.908"/>
-</kw>
-<kw name="End webtest" library="Common" type="TEARDOWN">
+<kw name="Test specific teardown" type="TEARDOWN">
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:37.910" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:34.909" endtime="20241004 15:19:37.910"/>
+<msg timestamp="20241005 19:15:06.098" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241005 19:15:03.085" endtime="20241005 19:15:06.098"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20241004 15:19:37.910" level="DEBUG">Closing browser with session id edfd56878a1ee819649187f5fa8ec607.</msg>
-<msg timestamp="20241004 15:19:37.910" level="DEBUG">DELETE http://localhost:52376/session/edfd56878a1ee819649187f5fa8ec607 {}</msg>
-<msg timestamp="20241004 15:19:37.973" level="DEBUG">http://localhost:52376 "DELETE /session/edfd56878a1ee819649187f5fa8ec607 HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:37.973" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:37.910" endtime="20241004 15:19:40.076"/>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20241005 19:15:06.098" endtime="20241005 19:15:08.214"/>
 </kw>
-<status status="PASS" starttime="20241004 15:19:34.909" endtime="20241004 15:19:40.076"/>
+<status status="PASS" starttime="20241005 19:15:03.084" endtime="20241005 19:15:08.214"/>
 </kw>
-<doc>This has been generated to test test setup and test teardown</doc>
-<tag>cmd</tag>
-<status status="FAIL" starttime="20241004 15:19:17.611" endtime="20241004 15:19:40.077">Element 'xpath=//span[contains(text(),'Chevron Full Zip Hoodie NBA Back Cut Team Colour Contrast Zip Hoodie')]' not visible after 5 seconds.</status>
+<status status="PASS" starttime="20241005 19:14:58.179" endtime="20241005 19:15:08.215"/>
 </test>
-<test id="s1-t4" name="Logged out user must sign in to check out (Gherkin Language)" line="37">
-<kw name="Begin webtest" library="Common" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241004 15:19:40.081" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<msg timestamp="20241004 15:19:40.616" level="DEBUG">POST http://localhost:52478/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
-<msg timestamp="20241004 15:19:40.616" level="DEBUG">Starting new HTTP connection (1): localhost:52478</msg>
-<msg timestamp="20241004 15:19:41.151" level="DEBUG">http://localhost:52478 "POST /session HTTP/1.1" 200 879</msg>
-<msg timestamp="20241004 15:19:41.151" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:41.151" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/timeouts {"script": 5000}</msg>
-<msg timestamp="20241004 15:19:41.152" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:41.152" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:41.152" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/timeouts {"implicit": 0}</msg>
-<msg timestamp="20241004 15:19:41.153" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:41.153" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:41.153" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/url {"url": "https://www.amazon.de/-/en/ref=nav_logo"}</msg>
-<msg timestamp="20241004 15:19:42.611" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:42.612" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.612" level="DEBUG">Opened browser with session id 1985951ac4918729c77dfe629481f726.</msg>
-<status status="PASS" starttime="20241004 15:19:40.080" endtime="20241004 15:19:42.612"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<msg timestamp="20241004 15:19:42.612" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/window/maximize {}</msg>
-<msg timestamp="20241004 15:19:42.639" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/window/maximize HTTP/1.1" 200 52</msg>
-<msg timestamp="20241004 15:19:42.639" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:42.612" endtime="20241004 15:19:42.639"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:40.080" endtime="20241004 15:19:42.639"/>
-</kw>
-<kw name="Given User not logged in" library="Amazon">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Hello, Sign in</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20241004 15:19:42.640" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/frame {"id": null}</msg>
-<msg timestamp="20241004 15:19:42.642" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/frame HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:42.642" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.642" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/elements {"using": "xpath", "value": "//*[contains(., 'Hello, Sign in')]"}</msg>
-<msg timestamp="20241004 15:19:42.658" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:42.659" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.659" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/elements {"using": "xpath", "value": "//frame|//iframe"}</msg>
-<msg timestamp="20241004 15:19:42.666" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/elements HTTP/1.1" 200 129</msg>
-<msg timestamp="20241004 15:19:42.666" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.666" level="DEBUG">Current frame has 1 subframes.</msg>
-<msg timestamp="20241004 15:19:42.666" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/frame {"id": {"element-6066-11e4-a52e-4f735466cecf": "f.4085A1EECCDBE885D6C3ECE9CF32D322.d.53E24D39AECC3C60CDA9249FF8016E31.e.180"}}</msg>
-<msg timestamp="20241004 15:19:42.692" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/frame HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:42.693" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.693" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/elements {"using": "xpath", "value": "//*[contains(., 'Hello, Sign in')]"}</msg>
-<msg timestamp="20241004 15:19:42.698" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/elements HTTP/1.1" 200 12</msg>
-<msg timestamp="20241004 15:19:42.698" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.698" level="DEBUG">POST http://localhost:52478/session/1985951ac4918729c77dfe629481f726/frame {"id": null}</msg>
-<msg timestamp="20241004 15:19:42.699" level="DEBUG">http://localhost:52478 "POST /session/1985951ac4918729c77dfe629481f726/frame HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:42.699" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.699" level="DEBUG">GET http://localhost:52478/session/1985951ac4918729c77dfe629481f726/source {}</msg>
-<msg timestamp="20241004 15:19:42.719" level="DEBUG">http://localhost:52478 "GET /session/1985951ac4918729c77dfe629481f726/source HTTP/1.1" 200 450512</msg>
-<msg timestamp="20241004 15:19:42.721" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.722" level="DEBUG">GET http://localhost:52478/session/1985951ac4918729c77dfe629481f726/screenshot {}</msg>
-<msg timestamp="20241004 15:19:42.922" level="DEBUG">http://localhost:52478 "GET /session/1985951ac4918729c77dfe629481f726/screenshot HTTP/1.1" 200 790456</msg>
-<msg timestamp="20241004 15:19:42.948" level="DEBUG">Finished Request</msg>
-<msg timestamp="20241004 15:19:42.950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20241004 15:19:42.951" level="FAIL">Page should have contained text 'Hello, Sign in' but did not.</msg>
-<msg timestamp="20241004 15:19:42.951" level="DEBUG">Traceback (most recent call last):
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\__init__.py", line 496, in run_keyword
-    return DynamicCore.run_keyword(self, name, args, kwargs)
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\robotlibcore.py", line 94, in run_keyword
-    return self.keywords[name](*args, **(kwargs or {}))
-  File "C:\Users\Mehme\PycharmProjects\Automation\venv\lib\site-packages\SeleniumLibrary\keywords\element.py", line 140, in page_should_contain
-    f"Page should have contained text '{text}' but did not."
-AssertionError: Page should have contained text 'Hello, Sign in' but did not.</msg>
-<status status="FAIL" starttime="20241004 15:19:42.640" endtime="20241004 15:19:42.951"/>
-</kw>
-<status status="FAIL" starttime="20241004 15:19:42.640" endtime="20241004 15:19:42.951"/>
-</kw>
-<kw name="And User searches and add product to cart" library="Amazon">
-<status status="NOT RUN" starttime="20241004 15:19:42.952" endtime="20241004 15:19:42.952"/>
-</kw>
-<kw name="Then User is required to sign in" library="Amazon">
-<status status="NOT RUN" starttime="20241004 15:19:42.952" endtime="20241004 15:19:42.952"/>
-</kw>
-<kw name="End webtest" library="Common" type="TEARDOWN">
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20241004 15:19:45.966" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20241004 15:19:42.952" endtime="20241004 15:19:45.966"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20241004 15:19:45.967" level="DEBUG">Closing browser with session id 1985951ac4918729c77dfe629481f726.</msg>
-<msg timestamp="20241004 15:19:45.967" level="DEBUG">DELETE http://localhost:52478/session/1985951ac4918729c77dfe629481f726 {}</msg>
-<msg timestamp="20241004 15:19:46.031" level="DEBUG">http://localhost:52478 "DELETE /session/1985951ac4918729c77dfe629481f726 HTTP/1.1" 200 14</msg>
-<msg timestamp="20241004 15:19:46.031" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20241004 15:19:45.966" endtime="20241004 15:19:48.115"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:42.952" endtime="20241004 15:19:48.115"/>
-</kw>
-<doc>Gherkin lang example</doc>
-<tag>Gherkin</tag>
-<status status="FAIL" starttime="20241004 15:19:40.079" endtime="20241004 15:19:48.116">Page should have contained text 'Hello, Sign in' but did not.</status>
-</test>
-<kw name="Cleanup Testing data" library="Common" type="TEARDOWN">
-<kw name="Log" library="BuiltIn">
-<arg>clearing test data...</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20241004 15:19:48.119" level="INFO">clearing test data...</msg>
-<status status="PASS" starttime="20241004 15:19:48.119" endtime="20241004 15:19:48.119"/>
-</kw>
-<status status="PASS" starttime="20241004 15:19:48.118" endtime="20241004 15:19:48.119"/>
-</kw>
-<status status="FAIL" starttime="20241004 15:19:00.225" endtime="20241004 15:19:48.119"/>
-=======
-<robot generator="Robot 5.0 (Python 3.7.9 on win32)" generated="20220728 11:50:53.195" rpa="false" schemaversion="3">
-<suite id="s1" name="Item added" source="C:\Users\ett19809\PycharmProjects\Demo_Project_RobotFramework\Tests\Item_added.robot">
-<test id="s1-t1" name="Should be able to search for product" line="6">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.amazon.de/-/en/ref=nav_logo</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220728 11:50:53.455" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.de/-/en/ref=nav_logo'.</msg>
-<status status="PASS" starttime="20220728 11:50:53.455" endtime="20220728 11:50:58.501"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220728 11:50:58.501" endtime="20220728 11:50:58.643"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220728 11:51:01.655" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220728 11:50:58.644" endtime="20220728 11:51:01.655"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=sp-cc-accept</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220728 11:51:01.655" level="INFO">Clicking button 'id=sp-cc-accept'.</msg>
-<status status="PASS" starttime="20220728 11:51:01.655" endtime="20220728 11:51:01.768"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=twotabsearchtextbox</arg>
-<arg>Nba hoodie zipper</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220728 11:51:01.768" level="INFO">Typing text 'Nba hoodie zipper' into text field 'id=twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20220728 11:51:01.768" endtime="20220728 11:51:01.954"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=//input[@id='nav-search-submit-button']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220728 11:51:01.954" level="INFO">Clicking button 'xpath=//input[@id='nav-search-submit-button']'.</msg>
-<status status="PASS" starttime="20220728 11:51:01.954" endtime="20220728 11:51:03.521"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220728 11:51:06.528" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220728 11:51:03.524" endtime="20220728 11:51:06.529"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220728 11:51:06.530" endtime="20220728 11:51:06.615"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220728 11:51:06.615" level="INFO">Clicking element 'xpath=(//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[2]'.</msg>
-<status status="PASS" starttime="20220728 11:51:06.615" endtime="20220728 11:51:08.234"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>id=add-to-cart-button</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220728 11:51:08.234" endtime="20220728 11:51:08.255"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[@class='a-button-text a-text-left']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220728 11:51:08.255" level="INFO">Clicking element 'xpath=//a[@class='a-button-text a-text-left']'.</msg>
-<status status="PASS" starttime="20220728 11:51:08.255" endtime="20220728 11:51:08.845"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Sign In</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220728 11:51:08.846" endtime="20220728 11:51:08.880"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220728 11:51:08.880" endtime="20220728 11:51:11.044"/>
-</kw>
-<tag>addItem</tag>
-<status status="PASS" starttime="20220728 11:50:53.455" endtime="20220728 11:51:11.044"/>
-</test>
-<status status="PASS" starttime="20220728 11:50:53.200" endtime="20220728 11:51:11.044"/>
->>>>>>> e66eb882e8aec444845fc41df02e0909c7e6d053
+<status status="PASS" starttime="20241005 19:14:58.036" endtime="20241005 19:15:08.217"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="3" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<<<<<<< HEAD
-<stat pass="0" fail="1" skip="0">cmd</stat>
-<stat pass="0" fail="1" skip="0">Gherkin</stat>
-<stat pass="0" fail="1" skip="0">Smoke</stat>
-<stat pass="1" fail="0" skip="0">tryOut</stat>
 </tag>
 <suite>
-<stat pass="1" fail="3" skip="0" id="s1" name="resourcesUsedTC">resourcesUsedTC</stat>
-=======
-<stat pass="1" fail="0" skip="0">addItem</stat>
-</tag>
-<suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Item added">Item added</stat>
->>>>>>> e66eb882e8aec444845fc41df02e0909c7e6d053
+<stat pass="1" fail="0" skip="0" id="s1" name="Legal entity creation">Legal entity creation</stat>
 </suite>
 </statistics>
 <errors>
